@@ -1,0 +1,49 @@
+/*TODO:
+resize images, center the text, go back home link button
+*/
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(100, 149, 237);
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: auto;
+    border-radius: 20px ;
+
+}
+
+.foodPic{
+    border-radius: 50px ;
+}
+
+.instructions{
+    /* background-color: white; */
+   font-weight: 200;
+   font-size: large;
+}
+
+h3{
+    margin: 20px;
+}
+.meals li{
+    display: inline-block;
+    padding: 35px;
+    margin: 10px;
+    border: 2px double darkblue;
+    border-radius: 3%;
+    width: 392px;
+    height: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: .5s;
+
+}
+
+.meals li:hover{
+    background-color: lightblue;
+    transform: scale(1.1);
+}
