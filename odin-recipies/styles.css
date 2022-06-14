@@ -10,12 +10,35 @@ img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    width: 15%;
     height: auto;
     border-radius: 20px ;
 
 }
 
+.gif{
+    width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+div{
+    margin-left: 20px;
+}
+
+.intro, .intro p{
+    text-align: center;
+    width: 650px;
+    height: auto;
+    margin: 30px auto 20px;
+    border-radius: 35px;
+}
+
+.intro p{
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: -5px;
+}
 .foodPic{
     border-radius: 50px ;
 }
@@ -23,11 +46,11 @@ img{
 .instructions{
     /* background-color: white; */
    font-weight: 200;
-   font-size: large;
+   font-size: medium;
 }
 
 h3{
-    margin: 20px;
+    margin: 10px;
 }
 .meals li{
     display: inline-block;
