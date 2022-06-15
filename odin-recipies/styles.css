@@ -6,6 +6,13 @@ resize images, center the text, go back home link button
     background-color: rgb(100, 149, 237);
 }
 
+body{
+/*     
+    background-image: url(images/kitchen.jpg);
+    width: 100%;
+    object-fit: fill;
+    /* background-color: hsl(); */
+} 
 img{
     display: block;
     margin-left: auto;
@@ -17,13 +24,22 @@ img{
 }
 
 .gif{
-    width: 400px;
+    width: 500px;
     height: auto;
     margin-bottom: 20px;
 }
 
 div{
     margin-left: 20px;
+}
+
+div .meals{
+    display: flex;
+}
+
+#mealOne, #mealTwo{
+    display: flex;
+    justify-content: space-around;
 }
 
 .intro, .intro p{
@@ -51,6 +67,7 @@ div{
 
 h3{
     margin: 10px;
+    text-align: center;
 }
 .meals li{
     display: inline-block;
