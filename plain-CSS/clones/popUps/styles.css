@@ -1,0 +1,291 @@
+/*dark mode one line*/
+/* html{
+    color-scheme: dark light;
+} */
+body{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(90, 47, 60);
+}
+
+.exit-btn{
+    border-radius: 50px;
+}
+
+.exit-btn:hover
+{
+background-color: red;
+color: white;
+
+}
+
+.card{
+    flex-shrink: 0;
+    background-color: rgb(154, 206, 206);
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    width: 500px;
+    margin: 20px;
+}
+
+/*dumb card*/
+.header-dumb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+
+.header-dumb .text{
+    font-size: larger;
+}
+
+.para{
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid rgba(50, 146, 190, 0.527);
+    margin-bottom: 8px;
+}
+
+.dumb-btn{
+    text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 75px;
+  height: auto;
+  padding: 10px;
+  
+}
+
+.dumb-btn:hover{
+    transition: .5s;
+    color:white;
+    background-color: rgba(50, 146, 190, 0.527);
+}
+
+.logo-dumb{
+    border-radius: 50%;
+    background-color: rgba(50, 146, 190, 0.527);
+    height: 40px;
+    width: 120px;
+    border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*Styles for the sunny card*/
+.card-sunny{
+    flex-direction: column;
+}
+
+.header-sunny{
+    background-color:  rgba(50, 146, 190, 0.527);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.container-sunny{
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+   gap: 5px;
+  
+}
+
+.container-sunny ul{
+    list-style: none;
+    margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.container-sunny li{
+    padding-bottom: 5px;
+}
+
+.sidebar-sunny {
+    flex-shrink: 0;
+    padding: 16px;
+  }
+
+.footer-sunny{
+    display: flex;
+    justify-content: center;
+}
+
+/*The holy grail format*/
+.card-grail{
+    flex-direction: column;
+    padding-bottom: -2px;
+}
+.header-grail{
+    align-items: center;
+    font-size: larger;
+    font-weight:bolder;
+    margin-bottom: 10px;
+    margin-left: 30px;
+
+}
+
+.sidebar-grail{
+    background-color: lightsalmon;
+    padding: 30px;
+    flex-shrink: 0;
+    width: 30px;
+  
+}
+
+.sidebar-grail ul{
+    padding: 0;
+    margin: 0;
+    list-style:armenian;
+
+}
+
+.sidebar-grail a{
+    text-decoration: none;
+}
+.container-grail{
+    box-sizing: border-box;
+    display: flex;
+    background-color: lightcoral;
+    padding: 10px;
+    margin-left: -30px;
+    margin-right: -30px;
+    margin-bottom: -20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.footer-grail{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px;
+}
+
+/*Practice of 8 basic CSS hover effects. url(https://www.codespot.org/css-hover-effects/)*/
+.card-effects{
+    flex-direction: column;
+}
+
+.container-effects{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.effects{
+    border-radius: 15px;
+    border: 1px darkblue solid;
+    width: 100px;
+    height: 120px;
+    font-weight: bolder;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.effect-1{
+    background-color: #86a4c7;
+    transition: 0.5s;
+}
+/*Ghost style-color changes*/
+.effect-1:hover{
+    color: #ff7a59;
+    border: #ff7a59 solid 1px;
+    background:#fff;
+}
+/*Animate-for functions such as form submission*/
+.effect-2:before{
+    font-family: FontAwesome;
+    content:"\f07a";
+    position: absolute;
+    top: 11px;
+    left: -30px;
+    transition: all 300ms ease;
+}
+.effect-2:hover:before{
+    left: 7px;
+    
+}
+/*Fade in-draw user attention*/
+.effect-3{
+    opacity: 0.5;
+}
+.effect-3:hover{
+    opacity: 1;
+}
+
+/*Scaling-draw user attention for action*/
+.effect-4:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/*Bounce- graps user attention*/
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  
+    40% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+  
+    80% {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+  }
+.effect-5:hover{
+    animation: bounce 2s;
+}
+
+/*Skew- no comment*/
+.effect-6:hover{
+    transform: skew(-20deg);
+}
+
+/*Highlight Border- similar to ghost button*/
+.effect-7:hover{
+    border: 3px dotted #ff7a59;
+    color: #ff7a59;
+    background: #fff;
+}
+
+/*Flip 3D- cool animation*/
+.effect-8{
+    transform-style: preserve-3d;
+}
+.effect-8:after{
+top: -100%;   
+ left: 0px;
+    width: 100%;
+    position: absolute;
+    border-radius: 5px;
+    background: #ff7a59;
+    content: 'Flipped';
+    transform-origin: left bottom;
+    transform: rotateX(90deg);
+}
+
+.effect-8:hover{
+    transform-origin: center bottom;
+    transform: rotateX(-90deg) translateY(100%);
+}
+
+/*Same header style with text on left and exit btn on right*/
+.header-sunny, .header-grail, .header-effects{
+    display: flex;
+    justify-content: space-between;
+}
