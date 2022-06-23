@@ -1,18 +1,21 @@
 body{
-    background-color: #1F2937;
+    background-color: white;
     height: 100vh;
-  margin: 0;
-  overflow: hidden;
+
   font-family: Roboto, sans-serif;
   display: flex;
   flex-direction: column; 
+  padding: 0;
+  margin: 0;
+  /* scroll-behavior: smooth; */
 
 }
 
 .header{
     display: flex;
     justify-content: space-around;
-    background-color: lightblue;
+    background-color: #1F2937;
+    color: white;
 }
 
 .header ul{
@@ -32,7 +35,14 @@ body{
     flex: 1;
 }
 .introduction{
+    background-color: #1F2937;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 75;
+    margin: 0;
+    padding-bottom: 75px;
 }
 
 .introduction .text{
@@ -46,11 +56,23 @@ body{
 .content-container{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 50px;
+}
+
+.reviews{
+    background-color: #E5E7EB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+
 }
 
 .img-text{
     border: 1px solid white;
+    border: 2px double #1F2937;
 }
 
 .call-action{
@@ -62,4 +84,46 @@ body{
 
 .call-action button{
     display: inline-block;
+}
+
+#img-intro{
+    width: 450px;
+}
+
+.introduction p{
+    width: 450px;;
+    height: auto;
+}
+
+.btn{
+    background-color: #3882F6;
+    color: white;
+    padding: 1em;
+    font-size: 1em;
+    border-radius: 0.9em;
+    padding: 10px 25px 10px 25px;
+}
+
+
+.content-img{
+    max-width: 100%;
+    max-height: 100%;
+ 
+}
+.img-text {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+
+    text-align: center;
+    border: 1px #3882F6 solid;
+    margin-top: 50px;
+    border-radius: 1em;
+    overflow: hidden; /*fix the image to fit inside*/
+    /* object-fit: scale-down;*/
+} 
+
+.img-text p{
+    display: none;
 }
