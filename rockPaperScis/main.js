@@ -1,5 +1,3 @@
-// console.log(match("rock"));
-
 //to generate a random number  between 0 and 3 (exclusive)
 //returns the move associated with the number
 function compPlay(){
@@ -17,16 +15,10 @@ function compPlay(){
 
 
 //makes the victory message
-function score(text){
-    const div = document.querySelector(".results");
-    div.textContent = "";
-    div.textContent = text;
-
-}
 
 //checks to see who won
-function check(val, compSelect){
-       
+function check(compSelect){
+    const val = this.getAttribute("id");
         var ending = "";
         var winner = "";
         var loser = "";
@@ -83,39 +75,9 @@ function check(val, compSelect){
     
 }
 
-function removeTransition(e){
-    const child = document.querySelector(".text-container");
- if(child.textContent !== ""){
-    textContent = "";
- }
-}
-
 //applies the click event to each button
 function match(){
-    const icons = document.querySelectorAll(".icons"); 
-         let playerScore = 0;
-        let compScore = 0;
-
-    icons.forEach(div => div.addEventListener("click", function(e){
-        const val = this.getAttribute("id");
-        var msg = check(val, compPlay());
-        
-        //updates the scores by seeing if you won or lost
-         var secondWord = msg.split(' ')[1];
-         console.log(secondWord)
-        if(secondWord === "win."){
-           playerScore++;
-        }else if(secondWord === "lose."){
-            compScore++;
-        }
-        msg = msg + `\n Player: ${playerScore}     Computer: ${compScore}`;
-
-        score(msg);
-
-    
-    }));
-
+    const icons = document.querySelectorAll(".icons");
+    icons.forEach(div => div.addEventListener("click", console.log(this.getAttribute("id"))));
 
 }
-
-match();
