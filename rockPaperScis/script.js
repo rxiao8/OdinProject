@@ -12,81 +12,145 @@ function compPlay(){
     }
 }
 
-//play a single round of the game
-function match(playerSelect, compSelect){
+// //play a single round of the game
+// function match(playerSelect, compSelect){
+//     //compare the two answers
+//     //outputs string for the winner
+//     const playerSelectLower = playerSelect.toLowerCase();
+//     var en = "";
+//     if(playerSelectLower === compSelect){
+//         //a tie
+//     }
+//     else if(playerSelectLower === "rock"){
+//         if(compSelect === "paper"){
+//             //player loses
+//             en = "lose";
+//         }
+//         else{
+//             //player wins
+//             en = "win";
+//         }
+//     }
+//     else if(playerSelectLower === "paper"){
+//         if(compSelect === "scissor"){
+//             //player loses
+//             en = "lose";
+//         }
+//         else{
+//             //player wins
+//             en = "win";
+//         }
+//     }
+//     else if(playerSelectLower === "scissor"){
+//         if(compSelect === "rock"){
+//             //player loses
+//             en = "lose";
+//         }
+//         else{
+//             //player wins
+//             en = "win";
+//         }
+//     }
+
+//     return en;
+// }
+
+//for each icon impose an event listener based on click
+//when clicked,, retrieve icon id value
+//compare the icon id value to the computer value
+//when clicked,, have the icon stay scaled up and highlighted
+function match(compSelect){
     //compare the two answers
     //outputs string for the winner
-    const playerSelectLower = playerSelect.toLowerCase();
-    var result = "";
-    if(playerSelectLower === compSelect){
-        //a tie
-    }
-    else if(playerSelectLower === "rock"){
-        if(compSelect === "paper"){
-            //player loses
-            result = "lose";
+    const icons = document.querySelectorAll(".icons");
+    var ending = "";
+    var winner = "";
+    var loser = "";
+    icons.forEach(div => div.addEventListener("click", function(e){
+        const val = this.getAttribute("id");
+        // console.log(val);
+        if(val === compSelect){
+            //a tie
+            return "It's a tie!";
+    
         }
-        else{
-            //player wins
-            result = "win";
+        else if(val === "rock"){
+            if(compSelect === "paper"){
+                //player loses
+                ending = "lose";
+                winner = "Paper";
+                loser = "Rock"
+            }
+            else{
+                //player wins
+                ending = "win";
+                winner = "Rock";
+                loser = "Paper"
+            }
         }
-    }
-    else if(playerSelectLower === "paper"){
-        if(compSelect === "scissor"){
-            //player loses
-            result = "lose";
+        else if(val === "paper"){
+            if(compSelect === "scissor"){
+                //player loses
+                ending = "lose";
+                winner = "Scissor";
+                loser = "Paper"
+            }
+            else{
+                //player wins
+                ending = "win";
+                winner = "Paper";
+                loser = "Scissor"
+            }
         }
-        else{
-            //player wins
-            result = "win";
+        else if(val === "scissor"){
+            if(compSelect === "rock"){
+                //player loses
+                ending = "lose";
+                winner = "Rock";
+                loser = "Scissor"
+            }
+            else{
+                //player wins
+                ending = "win";
+                winner = "Scissor";
+                loser = "Rock"
+            }
         }
-    }
-    else if(playerSelectLower === "scissor"){
-        if(compSelect === "rock"){
-            //player loses
-            result = "lose";
-        }
-        else{
-            //player wins
-            result = "win";
-        }
-    }
-
-    return result;
+    
+        
+        return `You ${ending}. ${winner} beats ${loser}`;
+ 
+    }));
+    
 }
-
 
 function game(){
     let playerScore = 0;
         let compScore = 0;
-    for(let i = 0; i < 5; i++){
-        var input = "";
-        var valid = true;
-        while(valid){
-            input = prompt("What is your choice?");
-            if (input !== "rock" && input !== "scissor" && input !=="paper"){
-                input = prompt("Invalid input. Try again");
-            }
-            else{
-                valid = false;
-            }
-        }
+   
 
-        const valInput = input;
+        // const valInput = input;
         const compInput = compPlay();
-        let result =  match(input, compInput);
-  
-        
-        if(result === "win"){
-           playerScore++;
-        }else{
-            compScore++;
-        }
+        const msg = match(compInput);
+        console.log(msg);
 
-        console.log(`You ${result}! ${input} vs ${compInput} \n Player: ${playerScore} \n Computer ${compScore}`);
+        // var secondWord = msg.split(' ')[1];
+        
+        // if(secondWord === "win"){
+        //    playerScore++;
+        // }else{
+        //     compScore++;
+        // }
+
+        //      const result = document.querySelector(".results");
+        // const div = document.createElement("div");
+        // div.textContent = `${msg} \n Player: ${playerScore}     Computer: ${compScore}`;
+        // results.appendChild(div);
+        // // console.log(`You ${endi}! ${input} vs ${compInput} \n Player: ${playerScore} \n Computer ${compScore}`);
+        
      
-    }
+    // }
 }
 
 
-// game();
+game();
