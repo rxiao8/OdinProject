@@ -1,0 +1,1 @@
+Creating a simple rock paper scissors game to practice more JS.
