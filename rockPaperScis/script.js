@@ -19,6 +19,7 @@ function compPlay(){
 //makes the victory message
 function score(text){
     const div = document.querySelector(".results");
+    div.classList.add("show-text");
     div.textContent = "";
     div.textContent = text;
 
@@ -96,6 +97,8 @@ function match(){
          let playerScore = 0;
         let compScore = 0;
 
+    const scoreBoard = document.querySelector(".scores");
+    scoreBoard.textContent = `Player: ${playerScore} --- Computer: ${compScore}`;
     icons.forEach(div => div.addEventListener("click", function(e){
         const val = this.getAttribute("id");
         var msg = check(val, compPlay());
@@ -108,8 +111,8 @@ function match(){
         }else if(secondWord === "lose."){
             compScore++;
         }
-        msg = msg + `\n Player: ${playerScore}     Computer: ${compScore}`;
-
+        
+        scoreBoard.textContent = `Player: ${playerScore} --- Computer: ${compScore}`;
         score(msg);
 
     

@@ -3,7 +3,8 @@ body{
     margin: 0;
     display: flex;
     flex-direction: column;
-    
+    justify-content: center;
+    align-items: center;
     background-color: #081831;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -12,27 +13,36 @@ body{
 .title{
     text-align: center;
     padding: 50px;
+    margin-top: 30px;
     margin-bottom: 30px;
-    
+    background-color: #050e1b;
+    font-size: 3em;
 }
 
 .text-container{
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
+    width: max-content;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .icon-container{
     display: flex;
     background-color: lightpink;
-    margin: 5px 150px 5px;
+    
     padding: 30px;
-    border-radius: 0.3em;
+    border-radius: 0.5em;
     border: 2px solid pink;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 90px;
-    /* max-width: 1000px; */
+    margin-bottom: 80px;
+    gap: 20px;
+    /* max-width: 1200px; */
+    
     /* width: max-content; */
 }
 
@@ -41,15 +51,25 @@ body{
     justify-content: center;
     align-items: center;
     transition: 0.3s;
+    padding: 20px;
+    border: solid 2px #081831;
+    border-radius: 100%;
+    background-color: rgb(252, 208, 215);
+   
 }
 
 .icons:hover{
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
 .results{
-    padding: 50px;
+    padding: 30px;
     justify-self: center;
     margin: auto;
 }
 
+.show-text, .text-container{
+    background-color: #050e1b;
+    color: lightcoral;
+    font-size: 2em;
+}
