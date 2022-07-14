@@ -8,16 +8,27 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <h1>Etch-A-Sketch</h1>
     <div class="content">
-        <div class="slider">
+        <div class="btn">
+        <div class="canvas-btn">
+         <button class="buttons" id="clear">Clear Canvas</button>
+       <button class="buttons" id="create" class="btns">Click here</button>
+    </div>
+    <div class="slider"><p>Select Canvas Dimensions: <span id="demo"></span></p>
             <input type="range" min="16" max="100" value="16"  id="range-slider">
-            <p>Value: <span id="demo"></span></p>
+            
         </div>
-        <button id="create" class="btns">Click here</button>
-        <button id="black" class="btns">Black Pen</button>
-        <button id="warm-RGB" class="btns">Warm</button>
-        <button id="cool-RGB" class="btns">Cool</button>  
-        <button id="erasor" class="btns">Erasor</button>
+       <div class="color-heading"><h3 >Colors: </h3></div> 
+       <div class="color-btn">
+       <button class="buttons color-btn" id="black" class="btns">Black</button>
+        <button class="buttons color-btn" id="red" class="btns">Red</button>
+        <button class="buttons color-btn" id="blue" class="btns">Blue</button>  
+        <button class="buttons color-btn" id="erasor" class="btns">Erasor</button>
+       <button class="buttons color-btn" id="RGB-wheel">RGB Wheel</button>
+    </div> 
+  
+    </div>
         <div class="grid-container">
         <div class="grid">
         </div></div>
