@@ -176,4 +176,10 @@ btnClear.addEventListener("click", (event) => {
   });
 });
 
-
+// //colors whole canvas
+// document.getElementById("background").addEventListener("click", ()=>{
+//   const tiles = document.querySelectorAll(".grid-items");
+//   tiles.forEach(function (item) {
+//     item.style.backgroundColor= "lightblue";
+//   });
+// })
