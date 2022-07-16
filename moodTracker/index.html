@@ -9,6 +9,19 @@
     </head>
     <body>
         <div class="content-container">
+          <div class="weather-container">
+            <!-- https://api.weather.gov/gridpoints/{office}/{grid X},{grid Y}/forecast
+For example: https://api.weather.gov/gridpoints/TOP/31,80/forecast 
+If you do not know the grid that correlates to your location, you can use the /points endpoint to retrieve the exact grid endpoint by coordinates:
+
+https://api.weather.gov/points/{latitude},{longitude}-->
+              <p> https://api.weather.gov/gridpoints/KBUY/36.05,79.47/forecast 
+                https://api.weather.gov/points/36.1,79.44
+              </p>
+              <button id="btn" type="button">Click for Weather</button>
+              <span id=""></span>
+              <span id=""></span>
+</div>
         <!--creating a list of toggles-->
         <div class="toggle-btn">
             
