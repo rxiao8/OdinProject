@@ -61,37 +61,33 @@ btn.addEventListener("click", makeGrid);
 })*/
 
 
-// function buttonActivation(button, action, type, color){
-//   const tiles = document.querySelectorAll(".grid-items");
-//   var temp = window.getComputedStyle(item).getPropertyValue("opacity");
+function buttonActivation(button, action, type, color){
+  const tiles = document.querySelectorAll(".grid-items");
+  var temp = window.getComputedStyle(item).getPropertyValue("opacity");
 //   if(type === "canvas"){
-//     // button.addEventListener("load", (event)=>{
-//     //   tiles.forEach(funtion(item){
-//     //     item.addEventListener("mouseover", function(){
-//     //       var temp = window.getComputedStyle(item).getPropertyValue("opacity");
-//     //       temp = +temp + 0.1;
-//     //       item.style.opacity = temp;
-//     //       item.style.backgroundColor = color;
-//     //     });
-//     //   });
-//     // });
-//   }
-//   else{
-//     button.addEventListener("click", function (e) {
-//       // const tiles = document.querySelectorAll(".grid-items");
-//       // console.log("black");
-//       tiles.forEach(function (item) {
-//         // item.style.setProperty("--tile-color-hover", "red");
-//         item.addEventListener("mouseover", function () {
-//           temp = +temp + 0.1; //since temp was a string
-//           // temp =parseFloat(temp) + 0.1; //another way to parse
-//           item.style.opacity = temp;
-//           item.style.backgroundColor = color;
-//         });
-//       });
-//     });
-//   }
 // }
+button.addEventListener(action, function (e) {
+  // const tiles = document.querySelectorAll(".grid-items");
+  // console.log("cool");
+  tiles.forEach(function (item) {
+    //  item.style.setProperty("--tile-color-hover", "blue");
+    item.addEventListener("mouseover", function () {
+      // var temp = window.getComputedStyle(item).getPropertyValue("opacity");
+      temp = +temp + 0.1; //since temp was a string
+      // temp =parseFloat(temp) + 0.1; //another way to parse
+      item.style.opacity = temp;
+      item.style.backgroundColor = color;
+    });
+  });
+});
+}
+
+// buttonActivation(btnCool, click, click, blue);
+// buttonActivation(btnCool, click, click, red);
+// buttonActivation(btnBlack, click, click, black);
+// buttonActivation(btnCool, click, click, blue);
+
+
 //to activate black pen color when window loads
 window.addEventListener("load", (event) => {
   makeGrid(slider.value);
