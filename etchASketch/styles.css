@@ -41,6 +41,8 @@ footer{
 html,
 body {
   height: 99%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -57,7 +59,7 @@ body {
   color: lightsalmon;
 }
 
-h1{
+h1 {
   font-size: 5em;
   margin: auto;
   padding: 10px;
@@ -66,27 +68,30 @@ h1{
   /*Have the content flex*/
   flex: 1;
   display: grid;
-  grid-template-columns: .5fr 1fr;
-  
+  grid-template-columns: 0.25fr 0.25fr 1fr;
+
   grid-template-rows: 600px;
   /* padding-left: 300px;
   padding-right: 300px; */
   margin: 20px;
-  /* align-items: center;
-  justify-items: center; */
+  margin-left:auto;
+  margin-right:auto;
+  /* width:; */
+ 
 }
-.btn{
+.btn {
   /* justify-items: center;
    */
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-    padding: 30px;
-   background-color: var(--gradient3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background-color: var(--gradient3);
+  grid-column-start: 2;
 }
 .buttons {
-  padding: 10px;
+  padding: 15px;
   margin: 8px;
   border: 2px var(--gradient1) solid;
   border-radius: 1.8em;
@@ -110,18 +115,23 @@ h1{
   grid-column-start: 1;
 } */
 
-div .color-btn{
+.color-btn{
+  display: grid;
+  grid-template-columns: repeat(3, 0.25fr);
+}
+div .color-btn {
   grid-row-start: 4;
 }
 
-.grid-container{
+.grid-container {
   /* grid-row-start: 1;
   grid-column-start: 2; */
+  grid-column-start: 3;
   box-sizing: border-box;
 }
 .grid {
   display: grid;
-  max-width: 600px;
+  width: 600px;
   height: 600px;
   /* grid-gap: 1em; */
   /**Allows variables to be used*/
@@ -134,11 +144,12 @@ div .color-btn{
 
 .grid-items {
   background-color: var(--tile-color);
-  border: 1px black solid;
+  /* border: 1px rgba(0, 0, 0, 1), solid; */
   color: white;
   box-sizing: border-box;
   padding: 1px;
-
+  opacity: .1;
+  border: 1px solid darkgray;
   /* background: rgba(255, 255, 255, .8);
   color: rgba(0, 0, 0, .8); */
 }
