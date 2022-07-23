@@ -23,37 +23,49 @@ https://api.weather.gov/points/{latitude},{longitude}-->
               <div class="weather-container"></div>
               <!-- <span id=""></span>
               <span id=""></span> -->
-</div>
-        <!--creating a list of toggles-->
+
+              <!--creating a list of toggles-->
         <div class="toggle-btn">
             
-            <!--use "checked" to have the slider in 1 position-->
-    
-              <label class="switch" id="switch-one">
-                <input type="checkbox">
-                <span class="toggle round"></span>
-              </label>
-              <label class="switch" id="switch-two">
-                <input type="checkbox">
-                <span class="toggle round"></span>
-              </label>
-              <label class="switch" id="switch-three">
-                <input type="checkbox">
-                <span class="toggle round"></span>
-              </label>
-              <label class="switch" id="switch-four">
-                <input type="checkbox">
-                <span class="toggle round"></span>
-              </label>
-              <label class="switch" id="switch-five">
-                <input type="checkbox">
-                <span class="toggle round"></span>
-              </label>
+          <!--use "checked" to have the slider in 1 position-->
+  
+            <label class="switch" id="switch-one">
+              <input type="checkbox">
+              <span class="toggle round"></span>
+            </label>
+            <label class="switch" id="switch-two">
+              <input type="checkbox">
+              <span class="toggle round"></span>
+            </label>
+            <label class="switch" id="switch-three">
+              <input type="checkbox">
+              <span class="toggle round"></span>
+            </label>
+            <label class="switch" id="switch-four">
+              <input type="checkbox">
+              <span class="toggle round"></span>
+            </label>
+            <label class="switch" id="switch-five">
+              <input type="checkbox">
+              <span class="toggle round"></span>
+            </label>
 
-        </div>
+      </div>
+  </div>
+  <div class="todo">
+    <div class="todo-header">
+    <input type="text" id="text-input" placeholder="Task">
+    <span onclick="addTask()" class="add-task-btn">Add</span>
     </div>
+    <div class="todo-list">
+      <ul class="list"></ul>
+    </div>
+  </div>
+</div>
+        
         <footer>Copyright &#169 Tracker 2022</footer>
         <script type="text/javascript" src="scriptWeather.js"></script>
         <script type="text/javascript" src="data.js"></script>
+        <script type="text/javascript" src="todo.js"></script>
     </body>
 </html>
