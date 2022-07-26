@@ -27,12 +27,8 @@ const header = document.getElementsByClassName("todo-header");
 function addTask() {
   const textInput = document.querySelector("#text-input");
   if (textInput.value === "") {
-    // console.log("empty");
-    // const alertSpan = document.createElement("span");
-    // alertSpan.textContent = "No text input. Try again."
     alert("No text input. Try again.");
   } else {
-    // console.log("text");
 
     const li = document.createElement("li");
     var t = document.createTextNode(textInput.value);

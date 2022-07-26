@@ -46,3 +46,5 @@
 // // Export the database to an Uint8Array containing the SQLite database file
 // var binaryArray = db.export();
 
+//reading excel file in js
+

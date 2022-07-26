@@ -7,6 +7,10 @@
         <link rel="stylesheet" href="styles.css" />
         <link rel="stylesheet" href="todo.css"/>
         <link rel="stylesheet" href="mood.css"/>
+        <!-- reference to js lib
+     <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>-->
+        <!-- allow auto update webpage as changes are made to excel -->
+
          <title>Tracker</title>
     </head>
     <body>
@@ -66,13 +70,30 @@ https://api.weather.gov/points/{latitude},{longitude}-->
   <div class="mood-container">
     <button class="moodBtn">Mood</button>
     <div class="mood-range"></div>
+<!-- <button onClick="getColor()">
+    click here
+</button> -->
+    <!-- <p id="GFG_UP" style=
+    "font-size: 19px; font-weight: bold;">
+</p>
+  
+
+  
+<p id="GFG_DOWN" style=
+    "color: #0000ff; font-size: 24px; font-weight: bold;">
+</p> -->
+  <div class="health-container">
+    <input type="file" id="file-input">
+    <table id="health-data"></table>
+  </div>
   </div>
 </div>
         
         <footer>Copyright &#169 Tracker 2022</footer>
         <script type="text/javascript" src="scriptWeather.js"></script>
-        <script type="text/javascript" src="data.js"></script>
+        <script type="module" src="data.cjs"></script>
         <script type="text/javascript" src="todo.js"></script>
         <script type="text/javascript" src="mood.js"></script>
+        <!-- <script type="module" src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script> -->
     </body>
 </html>

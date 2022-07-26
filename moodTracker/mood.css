@@ -1,9 +1,41 @@
 :root{
 
 }
+
+.mood-container{
+    padding: 8px;
+    width: 300px;
+    height: auto;
+
+}
+
 .mood-range{
     display: grid;
     /*Amazing, ok, tired, stressed, sad, angry*/
     /* grid-template-columns: repeat(6, 1fr); */
-    background-color: rgb(138, 43, 226);
+    /* background-color: #351e35; */
+    border: 3px #332a24 solid;
+    resize: none;
+
+}
+
+.tile{
+    padding: 10px;
+    transition: 0.2s;
+    box-sizing: border-box;
+    /*if not setting border-radius,, do the following*/
+    /* outline: 1px solid black; */
+    opacity: 0.8;
+    text-align: center;
+    text-transform: uppercase;
+}
+.mood-range .tile:hover{
+    opacity: 1;
+    color: #ffffff;
+}
+
+.selected{
+    transform: scale(1);
+    /* border: 2px solid rgb(37, 26, 17); */
+    font-size: larger;
 }

@@ -44,11 +44,11 @@ body {
 }
 
 input:checked + .toggle {
-  background-color: #21f39c;
+  background-color: #af7952;
 }
 
 input:focus + .toggle {
-  box-shadow: 0 0 2px #31b37c;
+  box-shadow: 0 0 2px #332a24;
 }
 
 input:checked + .toggle:before {
