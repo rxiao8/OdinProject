@@ -5,5 +5,5 @@
     display: grid;
     /*Amazing, ok, tired, stressed, sad, angry*/
     /* grid-template-columns: repeat(6, 1fr); */
-    background-color: blueviolet;
+    background-color: rgb(138, 43, 226);
 }
