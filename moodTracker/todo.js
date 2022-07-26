@@ -6,8 +6,21 @@
 //allows user to edit the text of the task and delete the task
 //checked and unchecked state have different css properties
 
+
+
+// Click on a close button to hide the current list item
+var crossedOut = document.getElementsByClassName("crossedOut");
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector("ul");
+list.addEventListener('click', function(event) {
+  if (event.target.tagName === 'LI') {
+    event.target.classList.toggle('checked');
+  }
+  console.log("here");
+}, false);
+
 //grab the todo-list div
-const list = document.querySelector(".list");
+// const list = document.querySelector(".list");
 const listContainer = document.getElementsByClassName("todo-list");
 const addBtn = document.getElementsByClassName("add-task-btn");
 const header = document.getElementsByClassName("todo-header");
@@ -21,42 +34,30 @@ function addTask() {
   } else {
     // console.log("text");
 
-    const task = document.createElement("li");
-    task.textContent = textInput.value;
-    task.classList.add("unchecked");
-    task.classList.add("task");
+    const li = document.createElement("li");
+    var t = document.createTextNode(textInput.value);
+ 
+    // li.classList.add("task");
+    li.appendChild(t);
 
     var span = document.createElement("span");
     var txt = document.createTextNode("\u00D7");
-    span.className = "close";
+    span.className = "crossedOut";
     span.appendChild(txt);
-    task.appendChild(span);
+    li.appendChild(span);
 
-    list.appendChild(task);
+    list.appendChild(li);
+    
+    for ( var i = 0; i < crossedOut.length; i++) {
+      crossedOut[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+          //cross out the text
+    // div.style.textDecoration = "line-through";
+
+      }
+    }
+
     textInput.value = "";
   }
-//Should I use arrays with nodes or a simple li style list in html?
-
-//   for (i = 0; i < close.length; i++) {
-//     close[i].onclick = function() {
-//       var div = this.parentElement;
-//       div.style.display = "none";
-//     }
-//   }
 }
-
-// list.addEventListener("click", ()=>{
-//     console.log()
-// });
-
-
-
-// //create the 'x' button
-// for(var i = 0; i < list.length; i++){
-//     var span = document.createElement("span");
-//   var txt = document.createTextNode("\u00D7");
-//   span.className = "close";
-//   span.appendChild(txt);
-//   myNodelist[i].appendChild(span);
-// }
-

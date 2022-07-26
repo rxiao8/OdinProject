@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="todo.css"/>
+        <link rel="stylesheet" href="mood.css"/>
          <title>Tracker</title>
     </head>
     <body>
@@ -26,7 +28,7 @@ https://api.weather.gov/points/{latitude},{longitude}-->
 
               <!--creating a list of toggles-->
         <div class="toggle-btn">
-            
+            <header class="toggle-header">Boolean Tracker</header>
           <!--use "checked" to have the slider in 1 position-->
   
             <label class="switch" id="switch-one">
@@ -61,11 +63,16 @@ https://api.weather.gov/points/{latitude},{longitude}-->
       <ul class="list"></ul>
     </div>
   </div>
+  <div class="mood-container">
+    <button class="moodBtn">Mood</button>
+    <div class="mood-range"></div>
+  </div>
 </div>
         
         <footer>Copyright &#169 Tracker 2022</footer>
         <script type="text/javascript" src="scriptWeather.js"></script>
         <script type="text/javascript" src="data.js"></script>
         <script type="text/javascript" src="todo.js"></script>
+        <script type="text/javascript" src="mood.js"></script>
     </body>
 </html>

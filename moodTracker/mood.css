@@ -1,0 +1,9 @@
+:root{
+
+}
+.mood-range{
+    display: grid;
+    /*Amazing, ok, tired, stressed, sad, angry*/
+    /* grid-template-columns: repeat(6, 1fr); */
+    background-color: blueviolet;
+}
