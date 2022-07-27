@@ -1,11 +1,6 @@
 // //import the xlsx pkg
 // var xlsx = require("xlsx");
 
-// import xlsx from "xlsx";
-// import * as XLSX from 'xlsx/xlsx.mjs';
-const fs = require("fs");
-// const xlsx = 
-
 // // //grab the wb
 // var wb = xlsx.readFile("xlsx/Financial Sample.xlsx",{cellDates: true});
 // //grab a sheet of the wb
@@ -35,18 +30,27 @@ const fs = require("fs");
 // console.log(ws2);
 
 
+/*So,, the following code does work but it will not fetch the file in the browser since the readFile() is a server function..and browsers cannot do file management. At least I do not know how to do it. Therefore,, I will create a HTML table,, input data there,, and have the option to export it as a excel file in the end & possibly generate a line graph.*/
+
+// @deno-types="https://unpkg.com/xlsx/types/index.d.ts"
+import * as XLSX from 'https://unpkg.com/xlsx/xlsx.mjs';
+
+/* load the codepage support library for extended support with older formats  */
+import * as cptable from 'https://unpkg.com/xlsx/dist/cpexcel.full.mjs';
+XLSX.set_cptable(cptable);
+
 //fetch the corresponding btns
 const weightInput = document.getElementById("weight-input");
 const waistInput = document.getElementById("waist-input");
 const btn = document.querySelector(".weightBtn");
 
- function addWeight(){
+ function addWeight(weightInput, waistInput, btn){
 //read in the ws
-var wbWeight = xlsx.readFile("workBook/WeightBook.xlsx", {cellDates: true});
+var wbWeight = XLSX.readFile("/home/rozie/Documents/repos/OdinProject/moodTracker/workBook/WeightBook.xlsx", {cellDates: true});
 //grab the desired ws
 var wsWeight = wbWeight.Sheets["Weight"];
 //convert the data into an arr of json
-const dataWeight = xlsx.utils.sheet_to_json(wsWeight);
+const dataWeight = XLSX.utils.sheet_to_json(wsWeight);
 console.log(dataWeight);
 
 //input the curr data,, weight,, and waist (opt)
@@ -58,12 +62,12 @@ var yyyy2 = today2.getFullYear();
 today2 = mm + '/' + dd + '/' + yyyy;
 
 //adds data to a new row
-xlsx.utils.sheet_add_aoa(wsWeight, [
+XLSX.utils.sheet_add_aoa(wsWeight, [
     [today2, weightInput.value, waistInput.value]
   ], {origin: -1});
 
 //writes the new ws to the same wb
-xlsx.writeFile(wbWeight,"xlsx/WeightBook.xlsx" );
+XLSX.writeFile(wbWeight,"/home/rozie/Documents/repos/OdinProject/moodTracker/workBook/WeightBook.xlsx" );
 }
 
 
