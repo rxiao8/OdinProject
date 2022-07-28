@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<fieldset>
+		<legend>Input measurements</legend>
+	<input type="text" id="weight" placeholder="Weight" required>
+	<input type="text" id="waist"placeholder="Waist" required>
+	<input type="text" id="glute"placeholder="Glute" required>
+	<button class="add">Add</button></fieldset>
+	<table>
+		<th>Date</th>
+		<th>Weight</th>
+		<th>Waist</th>
+		<th>Glute</th>
+		<tbody></tbody>
+	</table>
+	<script type="text/javascript">
+		const addBtn = document.querySelector("add");
+			const weight = document.getElementById("weight");
+			const waist = document.getElementById("waist");
+			const glute = document.getElementById("glute");
+		
+		addBtn.addEventListener("click", function(event){
+
+
+			const tr = document.createElement("tr");
+			const tdD = document.createElement("td");
+			const tdWe = document.createElement("td");
+			const tdWa = document.createElement("td");
+			const tdG = document.createElement("td");
+
+			var today = new Date();
+			today = today.getDate + "/" + today.getDay + "/" + today.getFullYear;
+			tdD.textContent = today;
+			tdWe.textContent = weight.value;
+			tdWa.textContent = waist.value;
+			tdG.textContent = glute.value;
+
+			const key = today;
+			const value = [tdWe, tdWa,tdG];
+
+			if(key && value){
+				localStorage.setItem(key,value);
+				location.reload();
+			}
+		});
+
+		for(var i = 0; i<localStorage.length; i++){
+			const key = localStorage.key(i);
+			const val = localStorage.getItem(key);
+
+		}
+
+		// var ExcelApp = new ActiveXObject("Excel.Application");
+		// 	var ExcelSheet = new ActiveXObject("Excel.Sheet");
+		// 	// a text is stored in the first cell  
+		// 	ExcelSheet.ActiveSheet.Cells(1, 1).Value = "Texto1";
+		// 	// the sheet is saved
+		// 	ExcelSheet.SaveAs("D:\\TEST.XLS");
+		// 	// close Excel with the Quit() method of the Application object 
+		// 	ExcelSheet.Application.Quit();
+
+		
+		// //  convert from html table to excel sheet
+		// 	$(document).ready(function () {
+		// 		$("#studtable").table2excel({
+		// 			filename: "Students.xls"
+		// 		});
+		// 	});
+		
+	</script>
+</body>
+</html> -->

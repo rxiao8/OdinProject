@@ -92,7 +92,7 @@ https://api.weather.gov/points/{latitude},{longitude}-->
     <input type="file" id="file-input">
     <table id="health-data"></table>
     <div class="weight">
-      <input type="text" id="weight-input" placeholder="Weight" required>
+      <!-- <input type="text" id="weight-input" placeholder="Weight" required>
       <input type="text" id="waist-input" placeholder="Waist(cm)">
       <span  onclick="addData()"class="weightBtn">Add</span>
       <table class="weight-tble">
@@ -100,7 +100,22 @@ https://api.weather.gov/points/{latitude},{longitude}-->
         <th>Weight (lbs)</th>
         <th>Waist (cm)</th>
         <tbody class="body-tble"></tbody>
-      </table>
+      </table> -->
+      <fieldset>
+        <legend>Input measurements</legend>
+      <input type="text" id="weight" placeholder="Weight" required>
+      <input type="text" id="waist"placeholder="Waist" required>
+      <input type="text" id="glute"placeholder="Glute" required>
+    </fieldset> 
+    <table>
+      <th>Date</th>
+      <th>Weight</th>
+      <th>Waist</th>
+      <th>Glute</th>
+   <tbody class="tbl-body"></tbody>
+    </table>
+
+ <button type="button" id="here">hfakdf</button>
     </div>
   </div>
   </div>
@@ -108,10 +123,11 @@ https://api.weather.gov/points/{latitude},{longitude}-->
         
         <footer>Copyright &#169 Tracker 2022</footer>
         <script type="text/javascript" src="scriptWeather.js"></script>
-        <script type="module" src="script.js"></script>
+        <!-- <script type="module" src="script.js"></script> -->
         <script type="text/javascript" src="todo.js"></script>
         <script type="text/javascript" src="data.js"></script>
         <script type="text/javascript" src="mood.js"></script>
+        <script type="text/javascript" src="weigth.js"></script>
         <!-- <script type="text/javascript" src="https://www.npmjs.com/package/xlsx#installation"></script>
         <script type="module" src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script> -->
     </body>
